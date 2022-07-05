@@ -6,6 +6,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import { AddressInfo } from "net";
 import getPosts from "./endpoints/getPosts";
+import createPosts from "./endpoints/createPosts";
 
 dotenv.config();
 
@@ -26,6 +27,9 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/posts", getPosts)
+app.post("/posts", createPosts)
+app.put("/posts", createPosts)
+
 
 const server = app.listen(process.env.PORT || 3003, () => {
     if (server) {

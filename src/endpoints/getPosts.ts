@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
 import selectAllPosts from "../data/selectAllPosts";
-import { posts } from "../types";
 
 export default async function getPosts(req:Request, res:Response){
     try {
@@ -16,3 +15,4 @@ export default async function getPosts(req:Request, res:Response){
         res.status(500).send({message:error.message})
     }
 }
+

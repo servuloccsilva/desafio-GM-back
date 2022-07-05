@@ -4,3 +4,9 @@ Content-Type: application/json
 
 ###
 
+POST http://localhost:3003/posts
+Content-Type: application/json
+
+{
+    "mensagem": "Eu sou o teste número 4 =D"
+}
