@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import insertPosts from "../data/insertPosts";
 import { posts, postsInput } from "../types";
 
-export default async function createPosts(req:Request, res:Response){
+export default async function createPost(req:Request, res:Response){
     try {
         const {mensagem}:postsInput = req.body
 

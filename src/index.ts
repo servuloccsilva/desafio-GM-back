@@ -6,7 +6,9 @@ import cors from "cors";
 import dotenv from "dotenv";
 import { AddressInfo } from "net";
 import getPosts from "./endpoints/getPosts";
-import createPosts from "./endpoints/createPosts";
+import deletePosts from "./endpoints/deletePosts";
+import createPost from "./endpoints/createPosts";
+import createComment from "./endpoints/createComment";
 
 dotenv.config();
 
@@ -27,8 +29,9 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/posts", getPosts)
-app.post("/posts", createPosts)
-app.put("/posts", createPosts)
+app.post("/posts", createPost)
+app.delete("/posts/:id", deletePosts)
+app.post("/posts/:id/comment", createComment)
 
 
 const server = app.listen(process.env.PORT || 3003, () => {

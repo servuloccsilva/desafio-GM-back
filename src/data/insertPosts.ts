@@ -9,6 +9,7 @@ export default async function insertPosts(insertPosts:posts):Promise<string>{
         id,
         mensagem
     })
+    
 
     return "Post feito com sucesso"
 }
