@@ -8,19 +8,19 @@ POST http://localhost:3003/posts
 Content-Type: application/json
 
 {
-    "mensagem": "Eu sou o teste número 4 =D"
+    "mensagem": "Teste para ser deletado"
 }
 
 ###
-DELETE  http://localhost:3003/posts/165720349
+DELETE  http://localhost:3003/posts/1657168602764
 Content-Type: application/json
 
 ###
 
 
-POST http://localhost:3003/posts/1657168602764/comment
+POST http://localhost:3003/posts/001/comment
 Content-Type: application/json
 
 {
-    "comentario": "teste comentario"
+    "comentario": "comentario teste postman de novo"
 }
